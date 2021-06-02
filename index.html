@@ -5,17 +5,45 @@
 	<title>Demo</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+
+           $('.conLul li span').css("bottom","0px");
+           var thisIsGoing=0;
+           
+
+
+			$('.conLul li').hover(function(){
+
+				   $(this).children('span').stop().slideDown(200,function(){  });
+				 
+				
+				
+			},function(){
+ 
+   $(this).children('span').stop().slideUp(150,function(){ });  //animate({'bottom':'-30px'},600).hide(500);
+			
+				
+                    
+
+				
+				 
+			})
+		})
+	</script>
 </head>
 <body>
 	<div class="box">
 		<header class="header">
 			<ul class="headerUl clearfix">
-				<li><a href="#">菜单一</a></li>
-				<li><a href="#">菜单一</a></li>
-				<li><a href="#">菜单一</a></li>
-				<li><a href="#">菜单一</a></li>
-				<li><a href="#">菜单一</a></li>
-				<li><a href="#">菜单一</a></li>
+				<li><a href="#">html</a></li>
+				<li><a href="#">css</a></li>
+				<li><a href="#">javascript</a></li>
+				<li><a href="#">jQuery</a></li>
+				<li><a href="#">Bootstarp</a></li>
+				<li><a href="#">Scss</a></li>
 				<li class="info"><a href="javascript:;">个人信息</a></li>
 				<li class="userimg"><a href="#"><img src="image/ali.jpg"></a></li>
 			</ul>
@@ -23,12 +51,21 @@
 		<div class="content clearfix">
 			<div class="conL fl">
 				<ul class="conLul clearfix">
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>
+						<a href="javascript:;"><img src="image/img1.jpg"></a>
+						<span>这是一个隐藏的描述信息</span>
+					</li>
+					<li><a href="javascript:;"><img src="image/img2.jpg"></a></li>
+					<li>
+						<a href="javascript:;"><img src="image/img1.jpg"></a>
+						<span>这是一个隐藏的描述信息</span>
+					</li>
+					<li><a href="javascript:;"><img src="image/img2.jpg"></a></li>
+					<li>
+						<a href="javascript:;"><img src="image/img1.jpg"></a>
+						<span>这是一个隐藏的描述信息</span>
+					</li>
+					<li><a href="javascript:;"><img src="image/img2.jpg"></a></li>
 				</ul>
 			</div>
 			<div class="conR fr">

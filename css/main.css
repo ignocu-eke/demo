@@ -56,6 +56,23 @@ body{
 	margin-right: 20px;
 	margin-bottom: 20px;
 	border: 1px solid green;
+	overflow: hidden;
+	position: relative;
+}
+.conLul li span{
+	width: 100%;
+	height:30px;
+	line-height: 30px;
+	position:absolute;
+	bottom:-30px;
+	text-align: center;
+	background-color: black;
+	opacity:0.5;
+	display: none;
+}
+.conLul li img{
+	width: 100%;
+	height: 100%;
 }
 .conRul{
 	width: 365px;
