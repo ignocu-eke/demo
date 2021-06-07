@@ -8,28 +8,29 @@
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript">
 		$(function(){
-
-
-           $('.conLul li span').css("bottom","0px");
-           var thisIsGoing=0;
-           
-
-
+				var imgW=$('.conLul li').find('img').width();
+				var imgH=$('.conLul li').find('img').height();
+				var maxW=imgW+20;
+				var maxH=imgH+20;
 			$('.conLul li').hover(function(){
-
-				   $(this).children('span').stop().slideDown(200,function(){  });
-				 
-				
-				
+				$(this).find('img').stop().animate({"width":maxW,"height":maxH,'left':'-10px','top':'-10px'},500);
+				$(this).children('span').stop().slideDown(200,function(){  });
 			},function(){
+				$(this).find('img').stop().animate({"width":imgW,"height":imgH,'left':'0px','top':'0px'},500);
+  				$(this).children('span').stop().slideUp(150,function(){ });		 
+			})
  
-   $(this).children('span').stop().slideUp(150,function(){ });  //animate({'bottom':'-30px'},600).hide(500);
-			
-				
-                    
-
-				
-				 
+			$('.headerUl li a').hover(function(){
+				$(this).css('background','green');
+				$(this).siblings('.headerUlOl').css('display','block');
+			},function(){
+				$(this).css('background','');
+				$(this).siblings('.headerUlOl').css('display','none');
+			});
+			$('.headerUlOl').hover(function(){
+				$(this).css('display','block');
+			},function(){
+				$(this).css('display','none');
 			})
 		})
 	</script>
@@ -38,12 +39,49 @@
 	<div class="box">
 		<header class="header">
 			<ul class="headerUl clearfix">
-				<li><a href="#">html</a></li>
-				<li><a href="#">css</a></li>
-				<li><a href="#">javascript</a></li>
-				<li><a href="#">jQuery</a></li>
-				<li><a href="#">Bootstarp</a></li>
-				<li><a href="#">Scss</a></li>
+				<li>
+					<a href="#">html</a>
+					<ol class="headerUlOl">
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+					</ol>
+				</li>
+				<li><a href="#">css</a>
+					<ol class="headerUlOl">
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+					</ol>
+				</li>
+				<li><a href="#">javascript</a>
+					<ol class="headerUlOl">
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+					</ol>
+				</li>
+				<li><a href="#">jQuery</a>
+					<ol class="headerUlOl">
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+					</ol>
+				</li>
+				<li><a href="#">Bootstarp</a>
+					<ol class="headerUlOl">
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+					</ol>
+				</li>
+				<li><a href="#">Scss</a>
+					<ol class="headerUlOl">
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+					</ol>
+				</li>
 				<li class="info"><a href="javascript:;">个人信息</a></li>
 				<li class="userimg"><a href="#"><img src="image/ali.jpg"></a></li>
 			</ul>
@@ -55,17 +93,26 @@
 						<a href="javascript:;"><img src="image/img1.jpg"></a>
 						<span>这是一个隐藏的描述信息</span>
 					</li>
-					<li><a href="javascript:;"><img src="image/img2.jpg"></a></li>
+					<li>
+						<a href="javascript:;"><img src="image/img2.jpg"></a>
+						<span>这是一个隐藏的描述信息</span>
+					</li>
 					<li>
 						<a href="javascript:;"><img src="image/img1.jpg"></a>
 						<span>这是一个隐藏的描述信息</span>
 					</li>
-					<li><a href="javascript:;"><img src="image/img2.jpg"></a></li>
+					<li>
+						<a href="javascript:;"><img src="image/img2.jpg"></a>
+						<span>这是一个隐藏的描述信息</span>
+					</li>
 					<li>
 						<a href="javascript:;"><img src="image/img1.jpg"></a>
 						<span>这是一个隐藏的描述信息</span>
 					</li>
-					<li><a href="javascript:;"><img src="image/img2.jpg"></a></li>
+					<li>
+						<a href="javascript:;"><img src="image/img2.jpg"></a>
+						<span>这是一个隐藏的描述信息</span>
+					</li>
 				</ul>
 			</div>
 			<div class="conR fr">

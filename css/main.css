@@ -4,7 +4,6 @@ body{
 }
 .header{
 	margin:0 auto;
-	border: 1px solid blue;
 	height:52px;
 	background: #5a5a5a;
 }
@@ -12,13 +11,30 @@ body{
 	width: 1200px;
 	margin:0 auto;
 }
+.headerUl .headerUlOl{
+	position: relative;
+	z-index: 999;
+	display: none;
+}
+.headerUl .headerUlOl li{
+	width: 120px;
+	height: 50px;
+	background-color: gray;
+	border-bottom:1px solid red;
+}
 .headerUl li{
 	float: left;
 	width: 120px;
-	height: 50px;
+	height: 52px;
 	line-height: 50px;
 	text-align: center;
 	margin-right: 20px;
+}
+.headerUl li a{
+	font-size:16px;
+	color: #eee;
+	display: block;
+	height: 100%;
 }
 .headerUl .info{
 	text-align:right;
@@ -34,12 +50,6 @@ body{
 	width: 100%;
 	height:100%;
 	border-radius: 50%;
-}
-
-.headerUl li a{
-	font-size:16px;
-	color: #eee;
-	display: inline-block;
 }
 .content{
 	width: 1200px;
@@ -64,7 +74,7 @@ body{
 	height:30px;
 	line-height: 30px;
 	position:absolute;
-	bottom:-30px;
+	bottom:0px;
 	text-align: center;
 	background-color: black;
 	opacity:0.5;
@@ -73,6 +83,7 @@ body{
 .conLul li img{
 	width: 100%;
 	height: 100%;
+	position:absolute;
 }
 .conRul{
 	width: 365px;
